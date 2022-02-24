@@ -20,4 +20,9 @@
     <string name="menu_personal_info">Личная информация</string>
     <string name="menu_history">История покупок</string>
     <string name="menu_skidki">Система скидок</string>
+
+    <string name="logo_attract">Аттракционы</string>
+    <string name="logo_events">Мероприятия</string>
+    <string name="logo_food">Фуд-корт</string>
+    <string name="logo_zone">Зоны отдыха</string>
 </resources>

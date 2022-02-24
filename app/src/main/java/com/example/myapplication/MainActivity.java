@@ -1,41 +1,40 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Menu;
+import android.widget.Button;
 
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.navigation.NavigationView;
-
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapplication.databinding.ActivityMainBinding;
+import com.example.myapplication.ui.home.AttractActivity;
+import com.example.myapplication.ui.home.EventsActivity;
+import com.example.myapplication.ui.home.FoodActivity;
+import com.example.myapplication.ui.home.ZoneActivity;
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-    private ActivityMainBinding binding;
+    Button ButtAttract, ButtEvents, ButtFood, ButtZone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        com.example.myapplication.databinding.ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMain.toolbar);
-        binding.appBarMain.toolbar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        binding.appBarMain.toolbar.setOnClickListener(view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show());
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
@@ -47,13 +46,35 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        ButtAttract = findViewById(R.id.butt_attract);
+        ButtAttract.setOnClickListener(this::onClick);
+        ButtEvents = findViewById(R.id.butt_events);
+        ButtEvents.setOnClickListener(this::onClick);
+        ButtFood = findViewById(R.id.butt_food);
+        ButtFood.setOnClickListener(this::onClick);
+        ButtZone = findViewById(R.id.butt_zone);
+        ButtZone.setOnClickListener(this::onClick);
+
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
+    public void onClick(View view) {
+        if (view.getId() == R.id.butt_attract) {
+            Intent intentAttract = new Intent(this, AttractActivity.class);
+            startActivity(intentAttract);
+        }
+        if (view.getId() == R.id.butt_events) {
+            Intent intentEvents = new Intent(this, EventsActivity.class);
+            startActivity(intentEvents);
+        }
+        if (view.getId() == R.id.butt_food) {
+            Intent intentFood = new Intent(this, FoodActivity.class);
+            startActivity(intentFood);
+        }
+        if (view.getId() == R.id.butt_zone) {
+            Intent intentZone = new Intent(this, ZoneActivity.class);
+            startActivity(intentZone);
+        }
     }
 
     @Override

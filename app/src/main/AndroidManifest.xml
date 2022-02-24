@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".ui.home.ZoneActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.FoodActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.EventsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.AttractActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false"
             android:label="@string/title_activity_main"

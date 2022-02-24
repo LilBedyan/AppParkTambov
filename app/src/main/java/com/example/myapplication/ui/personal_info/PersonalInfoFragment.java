@@ -18,14 +18,11 @@ public class PersonalInfoFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        PersonalInfoViewModel personalInfoViewModel =
-                new ViewModelProvider(this).get(PersonalInfoViewModel.class);
+
 
         binding = FragmentPersonalInfoBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textPersonalInfo;
-        personalInfoViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

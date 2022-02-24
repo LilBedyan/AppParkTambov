@@ -6,17 +6,68 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Button
+        android:id="@+id/butt_zone"
+        android:layout_width="420dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@color/logo"
+        android:onClick="onClick"
+        android:text="@string/logo_zone"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/butt_food"
+        tools:ignore="UsingOnClickInXml" />
+
+    <Button
+        android:id="@+id/butt_food"
+        android:layout_width="420dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@color/logo"
+        android:onClick="onClick"
+        android:text="@string/logo_food"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butt_events"
+        tools:ignore="UsingOnClickInXml" />
+
+    <Button
+        android:id="@+id/butt_events"
+        android:layout_width="420dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@color/logo"
+        android:onClick="onClick"
+        android:text="@string/logo_events"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butt_attract"
+        tools:ignore="UsingOnClickInXml" />
+
+    <Button
+        android:id="@+id/butt_attract"
+        android:layout_width="420dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/logo"
+        android:onClick="onClick"
+        android:text="@string/logo_attract"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UsingOnClickInXml" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="attract_array">
+        <item>Верёвочный парк</item>
+        <item>Аттракцион "Башня"</item>
+        <item>Аттракцион "Корабль"</item>
+        <item>Аттракцион "Американские горки"</item>
+        <item>Аттракцион "Почувствуй себя пилотом"</item>
+        <item>Аттракцион "Автошкола для всех"</item>
+        <item>Аттракцион "ECOlogy"</item>
+    </string-array>
+    <string-array name="events_array">
+        <item>"Масленица" - сжигание чучела</item>
+        <item>Массовое катание на коньках</item>
+        <item>Прокат зимнего спортивного инвентаря</item>
+    </string-array>
+    <string-array name="food_array">
+        <item>Летняя терраса Cafe Garage</item>
+        <item>Homemade Lemonade</item>
+        <item>Мороженное №1</item>
+        <item>Lavazza (кофейня)</item>
+    </string-array>
+    <string-array name="zone_array">
+        <item>Зона отдыха взрослого населения</item>
+        <item>Зона экологической тропы</item>
+        <item>Детская игровая зона</item>
+        <item>Хозяйственная зона</item>
+        <item>Зона для маломобильного населения</item>
+        <item>Спортивная зона</item>
+        <item>Зона для посетителей с питомцами</item>
+    </string-array>
+</resources>

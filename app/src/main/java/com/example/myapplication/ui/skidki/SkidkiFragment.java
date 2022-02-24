@@ -18,14 +18,12 @@ public class SkidkiFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        SkidkiViewModel skidkiViewModel =
-                new ViewModelProvider(this).get(SkidkiViewModel.class);
+
 
         binding = FragmentSkidkiBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textSkidki;
-        skidkiViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
         return root;
     }
 
